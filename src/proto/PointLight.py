@@ -1,0 +1,2 @@
+"""The PointLight node specifies a light source that emits light equally in all directions. The emitted light can be detected by a LightSensor node. Putting a PointLight onboard a robot allows the PointLight to move with the robot."""
+from .proto import Proto # type: ignore

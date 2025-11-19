@@ -1,0 +1,2 @@
+"""The Transform node is a grouping node that defines a coordinate system for its children that is relative to the coordinate system of its parent. The 'scale' field of a Transform node can be adjusted only in a graphical context and not in a 'boundingObject' context. parent: Pose"""
+from .proto import Proto # type: ignore

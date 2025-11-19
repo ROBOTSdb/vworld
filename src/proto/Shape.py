@@ -1,0 +1,2 @@
+"""A Shape node is a visual objects that includes both an 'appearance' and a 'geometry'. A Shape can also be used in a 'boundingObject', in this case, only its 'geometry' field is taken into account."""
+from .proto import Proto # type: ignore

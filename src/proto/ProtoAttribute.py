@@ -1,0 +1,13 @@
+from typing import Any
+
+
+class ProtoAttributes:
+    def __init__(self) -> None:
+        ...
+    def __str__(self) -> str:
+        ...
+    def __getattribute__(self, name: str) -> Any:# type: ignore
+        ...
+    def __setattr__(self, name: str, value: Any) -> None:
+        ...
+    

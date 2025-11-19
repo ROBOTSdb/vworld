@@ -1,0 +1,2 @@
+"""A Solid node can be used to represent objects in the simulated environment (e.g. obstacles, walls, ground, robot parts, etc.). Solid nodes can be collision detected (boundingObject) and therefore can prevent objects from intersecting. In addition, Solid nodes can have an optional Physics node that allow them to be simulated with the physics engine. parent: Pose"""
+from .proto import Proto # type: ignore

@@ -1,0 +1,2 @@
+"""The DirectionalLight node defines a light source that illuminates along rays parallel to a given 3-dimensional vector. A DirectionalLight node is well-suited to model sunlight, for example. If you want to model a light bulb you should rather use a PointLight or a SpotLight node."""
+from .proto import Proto # type: ignore

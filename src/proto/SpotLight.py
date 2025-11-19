@@ -1,0 +1,2 @@
+"""The SpotLight node defines a light source that emits light from a specific point along a specific direction vector and constrained within a specific angle. The light emitted by a SpotLight (or other light sources) can be detected by a LightSensor node."""
+from .proto import Proto # type: ignore
