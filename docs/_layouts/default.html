@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="description" content="{{ site.description }}" />
+    <title>{{ page.title | default: site.title }}</title>
+    <link rel="stylesheet" href="{{ '/assets/css/styles.css' | relative_url }}" />
+  </head>
+  <body>
+    {% include header.html %}
+
+    <main class="container">
+      <article class="content">
+        <h1 class="page-title">{{ page.title | default: site.title }}</h1>
+        {{ content }}
+      </article>
+      <aside class="sidebar">
+        {% include nav.html %}
+      </aside>
+    </main>
+
+    {% include footer.html %}
+  </body>
+</html>

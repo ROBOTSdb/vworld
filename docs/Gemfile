@@ -1,0 +1,5 @@
+source 'https://rubygems.org'
+
+gem 'jekyll', '~> 4.2'
+# use webrick for local serving if needed on older rubies
+gem 'webrick', '~> 1.8'

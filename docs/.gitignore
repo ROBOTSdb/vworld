@@ -1,0 +1,5 @@
+.bundle/
+_site/
+node_modules/
+*.gem
+Gemfile.lock

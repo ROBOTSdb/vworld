@@ -1,0 +1,16 @@
+title: "Project Docs"
+description: "Simple, beautiful, practical technical docs"
+baseurl: "" # set to '/repo-name' for project pages
+url: ""
+markdown: kramdown
+theme: ""
+
+# Navigation is driven by _data/navigation.yml
+
+permalink: /:path/
+
+collections: {}
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
