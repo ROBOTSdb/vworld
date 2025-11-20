@@ -2,6 +2,8 @@ from typing import Any
 from ProtoAttribute import ProtoAttributes
 
 class Proto:
+    defined=False
+    name:str="general"
     properties:dict[str,ProtoAttributes]={}
     NoneForEror:bool=True
     def __getitem__(self,key:str)->Any:
