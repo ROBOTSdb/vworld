@@ -1,5 +1,5 @@
 from typing import Any
-from ProtoAttribute import ProtoAttributes
+from .ProtoAttribute import ProtoAttributes
 
 class Proto:
     defined=False
@@ -25,14 +25,21 @@ class Proto:
                 return None
             else:
                 raise(ValueError("use string key"))
+        if key=="children":
+            UserWarning("it is not recommended")
         self.properties[key]=value
     def __iter__(self):
         return self.properties.__iter__()
     def proto(self,tabs:int=1) -> str:
         value:str=""
         for i in self.properties:
-            value+=self.properties[i].proto(tabs=2)
+            if hasattr(i,'proto'):
+                value+=self.properties[i].proto(tabs=2)
+            
         return value
+    def add_child(self,name:str,child:Any)->None:
+        self.properties["children"][name]=child
 P=Proto()
 P['head']=ProtoAttributes(size=[1,2,3],color="red")
+P["children"]={}
 print(P.proto())
