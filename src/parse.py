@@ -86,6 +86,12 @@ def parse(code:str)->None:#Proto:
         ##print(i)
         if "IS" in text[line_num].split():
             text[line_num]=text[line_num].replace('IS','"IS')+'"'
+        if "USE" in text[line_num].split():
+            first_char=first_char_index(text[line_num])
+            if text[line_num][first_char:first_char+3]=='USE':
+                text[line_num]=text[line_num].replace('USE','USE "USE')+'"'
+            else:
+                text[line_num]=text[line_num].replace('USE','"USE')+'"'
         if '{' in text[line_num]:
             first_ele = True
         if not first_ele :
@@ -106,9 +112,9 @@ def parse(code:str)->None:#Proto:
     return obj
 
 def handel_url(line:str):
-    if "http" in line:
+    if ("http" in line)or ("webots" in line):
         first_char:int=first_char_index(line)
-        line=line[first_char:]+'"url":'+line[:first_char]
+        line=line[:first_char]+'"url":'+line[first_char:]
     return line
 
 
